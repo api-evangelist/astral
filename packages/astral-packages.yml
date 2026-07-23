@@ -1,0 +1,82 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.astral.sh/ + public package registries (PyPI, crates.io, npm, Homebrew)
+note: >-
+  Astral ships high-performance Python developer TOOLS (not client SDKs for a
+  hosted API). These are the first-party published binaries/packages for uv,
+  ruff, and ty. official:true marks packages published by Astral Software Inc.
+packages:
+  # --- uv (package & project manager) ---
+  - product: uv
+    language: python
+    registry: pypi
+    name: uv
+    url: https://pypi.org/project/uv/
+    install: pip install uv
+    official: true
+  - product: uv
+    language: rust
+    registry: crates.io
+    name: uv
+    url: https://crates.io/crates/uv
+    install: cargo install --git https://github.com/astral-sh/uv uv
+    official: true
+  - product: uv
+    language: shell
+    registry: homebrew
+    name: uv
+    url: https://formulae.brew.sh/formula/uv
+    install: brew install uv
+    official: false
+  - product: uv
+    language: binary
+    registry: github-releases
+    name: astral-sh/uv
+    url: https://github.com/astral-sh/uv/releases
+    install: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
+    official: true
+  # --- ruff (linter & formatter) ---
+  - product: ruff
+    language: python
+    registry: pypi
+    name: ruff
+    url: https://pypi.org/project/ruff/
+    install: pip install ruff
+    official: true
+  - product: ruff
+    language: rust
+    registry: crates.io
+    name: ruff
+    url: https://crates.io/crates/ruff
+    install: cargo install ruff
+    official: true
+  - product: ruff
+    language: javascript
+    registry: npm
+    name: "@astral-sh/ruff-wasm-web"
+    url: https://www.npmjs.com/package/@astral-sh/ruff-wasm-web
+    install: npm install @astral-sh/ruff-wasm-web
+    official: true
+    note: WebAssembly build of Ruff for browser/Node environments
+  - product: ruff
+    language: python
+    registry: pre-commit
+    name: astral-sh/ruff-pre-commit
+    url: https://github.com/astral-sh/ruff-pre-commit
+    install: 'pre-commit hook: astral-sh/ruff-pre-commit'
+    official: true
+  # --- ty (type checker & language server) ---
+  - product: ty
+    language: python
+    registry: pypi
+    name: ty
+    url: https://pypi.org/project/ty/
+    install: pip install ty
+    official: true
+  - product: ty
+    language: python
+    registry: pre-commit
+    name: astral-sh/ty-pre-commit
+    url: https://github.com/astral-sh/ty-pre-commit
+    install: 'pre-commit hook: astral-sh/ty-pre-commit'
+    official: true

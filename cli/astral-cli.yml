@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.astral.sh/
+note: >-
+  Astral's products are themselves command-line tools written in Rust. This
+  captures the three first-party CLIs and their top-level command surface.
+clis:
+  - name: uv
+    summary: Python package and project manager (replaces pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv).
+    docs: https://docs.astral.sh/uv/
+    reference: https://docs.astral.sh/uv/reference/cli/
+    install:
+      - 'curl -LsSf https://astral.sh/uv/install.sh | sh'
+      - pip install uv
+      - brew install uv
+    commands:
+      - group: project
+        commands: [init, add, remove, sync, lock, run, tree, build, publish, version]
+      - group: python
+        commands: [python install, python list, python pin, python find]
+      - group: tools
+        commands: [tool install, tool run, tool list, tool uninstall, tool upgrade]
+      - group: pip-interface
+        commands: [pip install, pip compile, pip sync, pip freeze, pip list, venv]
+      - group: cache
+        commands: [cache clean, cache prune, cache dir]
+  - name: ruff
+    summary: Python linter and code formatter.
+    docs: https://docs.astral.sh/ruff/
+    reference: https://docs.astral.sh/ruff/configuration/
+    install:
+      - uv tool install ruff@latest
+      - pip install ruff
+      - brew install ruff
+    commands:
+      - group: core
+        commands: [check, format, rule, linter, config, analyze graph, server, version]
+  - name: ty
+    summary: Python type checker and language server.
+    docs: https://docs.astral.sh/ty/
+    install:
+      - uv tool install ty@latest
+      - pip install ty
+    commands:
+      - group: core
+        commands: [check, server, version]

@@ -1,21 +1,49 @@
 aid: astral
 name: Astral
-description: 'Astral is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: developer-tools. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Astral (Astral Software Inc.) builds high-performance developer tools for the
+  Python ecosystem, written in Rust. Its products are uv, an extremely fast
+  Python package and project manager that replaces pip, pip-tools, pipx, poetry,
+  pyenv, twine, and virtualenv; Ruff, an extremely fast Python linter and code
+  formatter; and ty, a fast Python type checker and language server. Founded by
+  Charlie Marsh (creator of Ruff) and backed by Accel, Caffeinated Capital, and
+  angel investor Guillermo Rauch, Astral ships open-source command-line tooling
+  distributed via PyPI, crates.io, npm, and Homebrew. In March 2026 Astral
+  agreed to join OpenAI as part of the Codex team.
 url: https://raw.githubusercontent.com/api-evangelist/astral/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - accel
+- caffeinated-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/115962839?v=4
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Developer Tools
+- Python
+- Package Manager
+- Linter
+- Code Formatter
+- Type Checker
+- CLI
+- Open Source
+- Rust
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +53,36 @@ maintainers:
 common:
 - type: Website
   url: https://astral.sh/
+- type: DeveloperPortal
+  url: https://docs.astral.sh/
+- type: Documentation
+  url: https://docs.astral.sh/
+- type: GettingStarted
+  url: https://docs.astral.sh/uv/getting-started/
+- type: Blog
+  url: https://astral.sh/blog
+- type: GitHubOrganization
+  url: https://github.com/astral-sh
+- type: Support
+  url: https://discord.com/invite/c9MhzV8aU5
+- type: PrivacyPolicy
+  url: https://astral.sh/legal/privacy
+- type: About
+  url: https://astral.sh/about
+- type: Twitter
+  url: https://x.com/astral_sh
+- type: LinkedIn
+  url: https://www.linkedin.com/company/astral-sh
+- type: Packages
+  url: packages/astral-packages.yml
+- type: CLI
+  url: cli/astral-cli.yml
+- type: LLMsTxt
+  url: llms/astral-uv-llms.txt
+- type: DomainSecurity
+  url: security/astral-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
